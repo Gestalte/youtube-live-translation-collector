@@ -17,7 +17,12 @@ var commentIdentifier = (function() {
         isTranslation: function (txt) {
             return RegExp(pattern, 'i').test(txt)
         },
-        isSpecial: function(author) {
+        isSpecial: function(author) {            
+
+            if (author === null ) {
+                return false;
+            }
+
             return author.classList 
                 ? (author.classList.contains('moderator') || author.classList.contains('owner')) 
                 : author.content.author.classes.indexOf('moderator') > -1;
@@ -37,6 +42,18 @@ var commentIdentifier = (function() {
 
 var monitor = (function(){
     return {
+        setupWindow: function() {
+            // This creates a window at the top of the live chat window 
+            // where translations and spanner comments will appear.
+            let sticky = document.createElement('div');
+            let ticker = document.getElementById('ticker');
+
+            sticky.id = 'sticky';
+            sticky.style.maxHeight = '30%';
+            sticky.style.overflow = 'auto';
+            
+            ticker.parentNode.insertBefore(sticky, ticker);
+        },
         init: function() {
             let chatItems = document.querySelector('#items.style-scope.yt-live-chat-item-list-renderer');
 
@@ -68,14 +85,6 @@ var monitor = (function(){
 }());
 
 (function(){    
-    let sticky = document.createElement('div');
-    let ticker = document.getElementById('ticker');
-
-    sticky.id = 'sticky';
-    sticky.style.maxHeight = '30%';
-    sticky.style.overflow = 'auto';
-    
-    ticker.parentNode.insertBefore(sticky, ticker);
-
+    monitor.setupWindow();    
     window.top.addEventListener('load', monitor.init());
 })();
