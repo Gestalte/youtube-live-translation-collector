@@ -27,4 +27,4 @@ EN | translation | tr | 英訳 | 英訳/EN
 # Example Image
 This is what it looks like in action:
 
-![youtube-live-translation-collector](https://github.com/Gestalte/youtube-live-translation-collector/blob/master/liveTL.PNG?raw=true)
+![youtube-live-translation-collector](https://github.com/Gestalte/youtube-live-translation-collector/blob/Master/liveTL.PNG?raw=true)
