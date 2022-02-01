@@ -25,11 +25,3 @@ EN | translation | tr | 英訳 | 英訳/EN
 `/EN -` | `/translation -` | `/tr -` | `/英訳 -` | `/英訳/EN -`
 `/EN}` | `/translation}` | `/tr}` | `/英訳}` | `/英訳/EN}`
 `/EN }` | `/translation }` | `/tr }` | `/英訳 }` | `/英訳/EN }`
-`Name [EN]` | `Name [translation]` | `Name [tr]` | `Name [英訳]` | `Name [英訳/EN]`
-`/Name [EN]` | `/Name [translation]` | `/Name [tr]` | `/Name [英訳]` | `/Name [英訳/EN]`
-`名前 [EN]` | `名前 [translation]` | `名前 [tr]` | `名前 [英訳]` | `名前 [英訳/EN]`
-`/名前 [EN]` | `/名前 [translation]` | `/名前 [tr]` | `/名前 [英訳]` | `/名前 [英訳/EN]`
-`ナマエ [EN]` | `ナマエ [translation]` | `ナマエ [tr]` | `ナマエ [英訳]` | `ナマエ [英訳/EN]`
-`/ナマエ [EN]` | `/ナマエ [translation]` | `/ナマエ [tr]` | `/ナマエ [英訳]` | `/ナマエ [英訳/EN]`
-`なまえ [EN]` | `なまえ [translation]` | `なまえ [tr]` | `なまえ [英訳]` | `なまえ [英訳/EN]`
-`/なまえ [EN]` | `/なまえ [translation]` | `/なまえ [tr]` | `/なまえ [英訳]` | `/なまえ [英訳/EN]`
