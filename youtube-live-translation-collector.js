@@ -6,6 +6,7 @@
 // @author       https://github.com/Gestalte
 // @match        https://www.youtube.com/live_chat*
 // @grant        none
+// @license      WTFPL
 // ==/UserScript==
 
 var commentIdentifier = (function() {
