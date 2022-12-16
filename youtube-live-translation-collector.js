@@ -2,7 +2,7 @@
 // @name         YouTube Live Translation Collector
 // @namespace    https://github.com/Gestalte/youtube-live-translation-collector
 // @version      1.0
-// @description  Creates a window in YouTube's the live chat window that shows live translations and spanner comments.
+// @description  Creates a window in YouTube's live chat window, that shows live translations and spanner comments.
 // @author       https://github.com/Gestalte
 // @match        https://www.youtube.com/live_chat*
 // @grant        none
