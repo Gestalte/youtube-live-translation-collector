@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         YouTube Live Translation Collector
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @namespace    https://github.com/Gestalte/youtube-live-translation-collector
+// @version      1.0
+// @description  Creates a window in YouTube's the live chat window that shows live translations and spanner comments.
+// @author       https://github.com/Gestalte
 // @match        https://www.youtube.com/live_chat*
 // @grant        none
 // ==/UserScript==
