@@ -1,0 +1,70 @@
+[EN] Lorem ipsum dolor sit amet
+[translation] Lorem ipsum dolor sit amet
+[tr] Lorem ipsum dolor sit amet
+[英訳] Lorem ipsum dolor sit amet
+[英訳/EN]Lorem ipsum dolor sit amet
+EN: Lorem ipsum dolor sit amet
+translation: Lorem ipsum dolor sit amet
+tr: Lorem ipsum dolor sit amet
+英訳: Lorem ipsum dolor sit amet
+英訳/EN:Lorem ipsum dolor sit amet
+EN : Lorem ipsum dolor sit amet
+translation : Lorem ipsum dolor sit amet
+tr : Lorem ipsum dolor sit amet
+英訳 : Lorem ipsum dolor sit amet
+英訳/EN :Lorem ipsum dolor sit amet
+EN- Lorem ipsum dolor sit amet
+translation- Lorem ipsum dolor sit amet
+tr- Lorem ipsum dolor sit amet
+英訳- Lorem ipsum dolor sit amet
+英訳/EN-Lorem ipsum dolor sit amet
+EN - Lorem ipsum dolor sit amet
+translation - Lorem ipsum dolor sit amet
+tr - Lorem ipsum dolor sit amet
+英訳 - Lorem ipsum dolor sit amet
+英訳/EN -Lorem ipsum dolor sit amet
+EN} Lorem ipsum dolor sit amet
+translation} Lorem ipsum dolor sit amet
+tr} Lorem ipsum dolor sit amet
+英訳} Lorem ipsum dolor sit amet
+英訳/EN}Lorem ipsum dolor sit amet
+EN } Lorem ipsum dolor sit amet
+translation } Lorem ipsum dolor sit amet
+tr } Lorem ipsum dolor sit amet
+英訳 } Lorem ipsum dolor sit amet
+英訳/EN }Lorem ipsum dolor sit amet
+/[EN] Lorem ipsum dolor sit amet
+/[translation] Lorem ipsum dolor sit amet
+/[tr] Lorem ipsum dolor sit amet
+/[英訳] Lorem ipsum dolor sit amet
+/[英訳/EN]Lorem ipsum dolor sit amet
+/EN: Lorem ipsum dolor sit amet
+/translation: Lorem ipsum dolor sit amet
+/tr: Lorem ipsum dolor sit amet
+/英訳: Lorem ipsum dolor sit amet
+/英訳/EN:Lorem ipsum dolor sit amet
+/EN : Lorem ipsum dolor sit amet
+/translation : Lorem ipsum dolor sit amet
+/tr : Lorem ipsum dolor sit amet
+/英訳 : Lorem ipsum dolor sit amet
+/英訳/EN :Lorem ipsum dolor sit amet
+/EN- Lorem ipsum dolor sit amet
+/translation- Lorem ipsum dolor sit amet
+/tr- Lorem ipsum dolor sit amet
+/英訳- Lorem ipsum dolor sit amet
+/英訳/EN-Lorem ipsum dolor sit amet
+/EN - Lorem ipsum dolor sit amet
+/translation - Lorem ipsum dolor sit amet
+/tr - Lorem ipsum dolor sit amet
+/英訳 - Lorem ipsum dolor sit amet
+/英訳/EN -Lorem ipsum dolor sit amet
+/EN} Lorem ipsum dolor sit amet
+/translation} Lorem ipsum dolor sit amet
+/tr} Lorem ipsum dolor sit amet
+/英訳} Lorem ipsum dolor sit amet
+/英訳/EN}Lorem ipsum dolor sit amet
+/EN } Lorem ipsum dolor sit amet
+/translation } Lorem ipsum dolor sit amet
+/tr } Lorem ipsum dolor sit amet
+/英訳 } Lorem ipsum dolor sit amet
+/英訳/EN }Lorem ipsum dolor sit amet
