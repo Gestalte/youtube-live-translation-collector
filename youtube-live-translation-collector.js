@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 var commentIdentifier = (function() {
-    // Final Regex: /^\/?((英訳|英訳\/en|en|tr|translation)\s?(:|-|\})|\[(英訳|英訳\/en|en|tr|translation)\]|(英訳|英訳\/en|en|tr|translation)\s)/i
+    // Final Regex: /^\/?((英訳|英訳\/en|en|tr|translation)\s?(:|-|\})|\[(英訳|英訳\/en|en|tr|translation)\]|(英訳|英訳\/en|en|tr|translation)\\s)/i
     
     var basePattern = "^\\/?((§)\\s?(:|-|\\})|\\[(§)\\]|(§)\s)";
     var thingsToMatch = ["英訳", "英訳\/en", "en", "tr", "translation"];
