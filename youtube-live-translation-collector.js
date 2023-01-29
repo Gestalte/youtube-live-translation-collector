@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Live Translation Collector
 // @namespace    https://github.com/Gestalte/youtube-live-translation-collector
-// @version      1.1
+// @version      1.2
 // @description  Creates a window in YouTube's live chat window, that shows live translations and spanner comments.
 // @author       https://github.com/Gestalte
 // @match        https://www.youtube.com/live_chat*
@@ -10,9 +10,9 @@
 // ==/UserScript==
 
 var commentIdentifier = (function() {
-    // Final Regex: /(^\/?(英訳|英訳\/en|en|tr|translation)(\s?:|\s?-|\s?\})?\s?|\/?\[(英訳|英訳\/en|en|tr|translation)\])/i
-
-    var basePattern = "(^\\/?(§)(\\s?:|\\s?-|\\s?\\})?\\s?|\\/\\[(§)\\])";
+    // Final Regex: /^\/?((英訳|英訳\/en|en|tr|translation)\s?(:|-|\})|\[(英訳|英訳\/en|en|tr|translation)\]|(英訳|英訳\/en|en|tr|translation)\s)/i
+    
+    var basePattern = "^\\/?((§)\\s?(:|-|\\})|\\[(§)\\]|(§)\s)";
     var thingsToMatch = ["英訳", "英訳\/en", "en", "tr", "translation"];
     var pattern = basePattern.replace(/§/g, thingsToMatch.join('|'));
 
