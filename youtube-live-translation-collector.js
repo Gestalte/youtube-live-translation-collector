@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Live Translation Collector
 // @namespace    https://github.com/Gestalte/youtube-live-translation-collector
-// @version      1.2
+// @version      1.3
 // @description  Creates a window in YouTube's live chat window, that shows live translations and spanner comments.
 // @author       https://github.com/Gestalte
 // @match        https://www.youtube.com/live_chat*
@@ -16,7 +16,13 @@ var commentIdentifier = (function() {
     var thingsToMatch = ["英訳", "英訳\/en", "en", "tr", "translation"];
     var pattern = basePattern.replace(/§/g, thingsToMatch.join('|'));
 
+    var chat = document.querySelector('#chat');
+    var itemScroller = chat.querySelector('#item-scroller');
+
     return {
+        getSticky: function(){
+            return document.getElementById('sticky');
+        },
         isTranslation: function (txt) {
             return RegExp(pattern, 'i').test(txt)
         },
@@ -34,16 +40,30 @@ var commentIdentifier = (function() {
             let authorElement = node.querySelector('#author-name');
             let messageElement = node.querySelector('#message');
         
-            let message = messageElement.innerText.trim();
-
-            if(commentIdentifier.isSpecial(authorElement) || commentIdentifier.isTranslation(message)) {
-                monitor.stickComment(node);
+            if(messageElement != null){
+                
+                let message = messageElement.innerText.trim();
+                
+                if(commentIdentifier.isSpecial(authorElement) || commentIdentifier.isTranslation(message)) {
+                    commentIdentifier.stickComment(node);
+                }
+            }else{
+                console.log(node);
             }
+        },
+        stickComment: function(node) {
+            sticky.appendChild(node); // TODO: Find a way to copy the node instead of moving it.
+
+            itemScroller.scrollTop = itemScroller.scrollHeight;   
+            sticky.scrollTop = sticky.scrollHeight;
         }
     }
 }());
 
 var monitor = (function(){
+    
+    var chatItems = document.querySelector('#items.style-scope.yt-live-chat-item-list-renderer');
+
     return {
         setupWindow: function() {
             // This creates a window at the top of the live chat window 
@@ -58,8 +78,6 @@ var monitor = (function(){
             ticker.parentNode.insertBefore(sticky, ticker);
         },
         init: function() {
-            let chatItems = document.querySelector('#items.style-scope.yt-live-chat-item-list-renderer');
-
             // stick items that exist on load
             chatItems.querySelectorAll('yt-live-chat-text-message-renderer').forEach(commentIdentifier.identify); 
 
@@ -73,21 +91,13 @@ var monitor = (function(){
             // start the observer
             observer.observe(chatItems, { childList: true });
         },
-        stickComment: function(node) {
-            let sticky = document.getElementById('sticky');
-
-            sticky.appendChild(node);
-
-            let chat = document.querySelector('#chat');
-            
-            let itemScroller = chat.querySelector('#item-scroller');
-            itemScroller.scrollTop = itemScroller.scrollHeight;   
-            sticky.scrollTop = sticky.scrollHeight;
-        }
     }
 }());
 
+var sticky = '';
+
 (function(){    
     monitor.setupWindow();    
+    sticky = commentIdentifier.getSticky();
     window.top.addEventListener('load', monitor.init());
 })();
