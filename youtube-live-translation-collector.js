@@ -52,7 +52,48 @@ var commentIdentifier = (function() {
             }
         },
         stickComment: function(node) {
-            sticky.appendChild(node); // TODO: Find a way to copy the node instead of moving it.
+            //var newNode= document.importNode(node,true);            
+            //var newNode  =  structuredClone(node);
+            //var newNode = JSON.parse(JSON.stringify(node));
+            //var newNode = node.getElementById('#message');
+
+            let author = node.querySelector('#author-name');
+            let message = node.querySelector('#message');
+            let timestamp = node.querySelector('#timestamp');
+
+            //These work!
+            let img =  node.querySelector("yt-img-shadow:nth-child(1) > img:nth-child(1)");
+            console.log(img);
+            let src = img.getAttribute("src")
+            console.log(src);
+
+            //let badges = node.querySelectorAll("#chat-badges");
+            
+            img.removeAttribute("class");
+            img.style.borderRadius="25px";
+
+            let ii = img.outerHTML;
+            let tso = timestamp.outerHTML;
+            let ao = author.outerHTML;
+            let mo = message.outerHTML;
+
+            let z = document.createElement('span');
+            z.innerHTML = ii;
+            z.id = "image-holder";
+            // z.style.marginLeft="10px";
+            z.style.marginRight="10px";
+            z.style.width="24px";
+            z.style.height="24px";
+
+            let y = document.createElement('div');
+            y.classList.add('yt-live-chat-text-message-renderer');
+            y.classList.add('style-scope');
+            y.style.padding = "0 24px";
+            y.innerHTML =  z.outerHTML+tso+ao+mo;
+
+            console.log(y);
+
+            sticky.appendChild(y); // TODO: Find a way to copy the node instead of moving it.
 
             itemScroller.scrollTop = itemScroller.scrollHeight;   
             sticky.scrollTop = sticky.scrollHeight;
