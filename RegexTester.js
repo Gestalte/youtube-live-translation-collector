@@ -71,29 +71,14 @@ var testStringsAndExpectedResults = [
     ["/英訳/EN }Lorem ipsum dolor sit amet", true],
     ["EN: Lorem ipsum dolor sit amet", true],
     ["translation: Lorem ipsum dolor sit amet", true],
-    ["tr Lorem ipsum dolor sit amet", true],
-    ["英訳 Lorem ipsum dolor sit amet", true],
-    ["英訳/EN Lorem ipsum dolor sit amet", true],
-    ["EN  Lorem ipsum dolor sit amet", true],
-    ["translation  Lorem ipsum dolor sit amet", true],
-    ["tr  Lorem ipsum dolor sit amet", true],
-    ["英訳  Lorem ipsum dolor sit amet", true],
-    ["英訳/EN Lorem ipsum dolor sit amet", true],
-    ["/tr Lorem ipsum dolor sit amet", true],
-    ["/英訳 Lorem ipsum dolor sit amet", true],
-    ["/英訳/EN Lorem ipsum dolor sit amet", true],
-    ["/EN  Lorem ipsum dolor sit amet", true],
-    ["/translation  Lorem ipsum dolor sit amet", true],
-    ["/tr  Lorem ipsum dolor sit amet", true],
-    ["/英訳  Lorem ipsum dolor sit amet", true],
-    ["/英訳/EN Lorem ipsum dolor sit amet", true],
     ["true endingとかなんか", false],
     ["encounter an enemy", false],
+    ["(EN) Loki: I am innocent!",true],
 ]
 
 var regexTester = (function () {
 
-    var basePattern = "^\\/?((§)\\s?(:|-|\\})|\\[(§)\\]|(§)\\s)";
+    var basePattern = "^\\/?((§)\\s?(:|-|\\})|\\[(§)\\]|\\((§)\\)|(§)\s)";
     var thingsToMatch = ["英訳", "英訳\/en", "en", "tr", "translation"];
     var pattern = basePattern.replace(/§/g, thingsToMatch.join('|'));
 

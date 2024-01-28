@@ -12,6 +12,7 @@ Currently I do a case insensitive check for messages that start with the followi
 EN | translation | tr | 英訳 | 英訳/EN
 -- | ----------- | -- | -- | -----
 `[EN]` | `[translation]` | `[tr]` | `[英訳]` | `[英訳/EN]`
+`(EN)` | `(translation)` | `(tr)` | `(英訳)` | `(英訳/EN)`
 `EN:` | `translation:` | `tr:` | `英訳:` | `英訳/EN:`
 `EN :` | `translation :` | `tr :` | `英訳 :` | `英訳/EN :`
 `EN-` | `translation-` | `tr-` | `英訳-` | `英訳/EN-`
