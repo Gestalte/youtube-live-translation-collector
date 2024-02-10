@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Live Translation Collector
 // @namespace    https://github.com/Gestalte/youtube-live-translation-collector
-// @version      1.3
+// @version      1.3.1
 // @description  Creates a window in YouTube's live chat window, that shows live translations and spanner comments.
 // @author       https://github.com/Gestalte
 // @match        https://www.youtube.com/live_chat*
@@ -10,10 +10,10 @@
 // ==/UserScript==
 
 var commentIdentifier = (function() {
-    // Final Regex: /^\/?((英訳|英訳\/en|en|tr|translation)\s?(:|-|\})|\[(英訳|英訳\/en|en|tr|translation)\]|\((英訳|英訳\/en|en|tr|translation)\)|(英訳|英訳\/en|en|tr|translation)\\s)/i
+    // Final Regex: /^(\/|\u200b)?((英訳|英訳\/en|en|tr|translation|(en))\s?(:|-|\})|\[(英訳|英訳\/en|en|tr|translation|(en))\]|\((英訳|英訳\/en|en|tr|translation|(en))\)|(英訳|英訳\/en|en|tr|translation|(en))\s)/i
     
-    var basePattern = "^\\/?((§)\\s?(:|-|\\})|\\[(§)\\]|\((§)\)|(§)\s)";
-    var thingsToMatch = ["英訳", "英訳\/en", "en", "tr", "translation", "\(en\)"];
+    var basePattern = "^(\\/|\\u200b)?((§)\\s?(:|-|\\})|\\[(§)\\]|\\((§)\\)|(§)\\s)";
+    var thingsToMatch = ["英訳", "英訳\\/en", "en", "tr", "translation", "\(en\)"];
     var pattern = basePattern.replace(/§/g, thingsToMatch.join('|'));
 
     var chat = document.querySelector('#chat');
